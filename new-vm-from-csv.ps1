@@ -1,3 +1,14 @@
+	   <# 
+	   
+        .SYNOPSIS
+            Prompts for path to a csv with the following collumns set 
+             -NumVcpus $vmline.vCPU -MemoryMb $vmline.vRAM
+            vDiskGB
+
+NOT TESTED STILL WORKING ON THIS ONE
+
+    #>
+
 $csvPath = Read-host -prompt 'Enter absolute file path'
 foreach($vmLine in (Import-Csv -Path $csvPath)){
  
